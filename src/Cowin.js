@@ -94,7 +94,7 @@ function Cowin() {
                                 </FormControl>
                             </Box>
                         </Grid>
-                        <Grid item md={1} style={{ marginTop: '1.2%', marginLeft: '1%' }} sm={12} xs={12}>
+                        <Grid item md={1} style={{ marginTop: '1.2%', marginLeft: '1%' }} sm={12} xs={12} className='selectFields'>
                             <Box sx={{ minWidth: '95%', fontFamily: 'Readex Pro, sans-serif', marginTop: '0%' }}>
                                 <FormControl fullWidth>
                                     <InputLabel id="demo-simple-select-label">Age</InputLabel>
@@ -109,7 +109,7 @@ function Cowin() {
                                 </FormControl>
                             </Box>
                         </Grid>
-                        <Grid item md={1} style={{ marginTop: '1.2%', marginLeft: '1%' }} sm={12} xs={12}>
+                        <Grid item md={1} style={{ marginTop: '1.2%', marginLeft: '1%' }} sm={12} xs={12} className='selectFields'>
                             <Box sx={{ minWidth: '95%', fontFamily: 'Readex Pro, sans-serif', marginTop: '0%' }}>
                                 <FormControl fullWidth>
                                     <InputLabel id="demo-simple-select-label">Vaccine</InputLabel>

@@ -3,13 +3,14 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import './Cowin.css'
 
 export default function DenseAppBar() {
     return (
         <Box sx={{ flexGrow: 1, backgroundColor: '#0950D5' }}>
-            <AppBar position="static" sx={{ backgroundColor: '#07C597', paddingY: '5px' }}>
+            <AppBar position="static" sx={{ backgroundColor: '#07C597', paddingY: '10px' }}>
                 <Toolbar variant="dense" >
-                    <Typography variant="h5" color="inherit" component="div">
+                    <Typography variant="h5" color="inherit" component="div" className='logoText'>
                         co-Win
                     </Typography>
                 </Toolbar>

@@ -1,3 +1,6 @@
+body{
+    background-color: rgba(229, 231, 235, 0.61)
+}
 .searchBtn{
     border: 2px solid #07C597 !important;
     color: #07C597 !important;
@@ -6,5 +9,22 @@
 .searchBtn:hover{
     background-color: #07c5962d !important;
     border: 2px solid #07C597 !important;
-
 }
+
+.logoText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoText::after{
+    content: "get vaccinated now";
+    font-size: 10px;
+}
+
+@media only screen and (max-width: 880px) {
+    .selectFields{
+        padding-top: 4%;
+    }
+  }
