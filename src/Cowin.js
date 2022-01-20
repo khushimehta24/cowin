@@ -73,13 +73,13 @@ function Cowin() {
                 <CardContent style={{ width: '90%' }}>
                     <h3 sx={{ fontFamily: 'Readex Pro, sans-serif' }}>Find Nearby Vaccination Centers</h3>
                     <Grid container style={{ width: '100%' }}>
-                        <Grid item>
+                        <Grid item md={2} sm={12} xs={12}>
                             <TextField margin="normal" sx={{ width: '95%', fontFamily: 'Readex Pro, sans-serif' }} required id="pincode" name="pincode" label="PinCode" value={fields.pincode} onChange={handleChange} />
                         </Grid>
-                        <Grid item>
+                        <Grid item md={2} sm={12} xs={12}>
                             <TextField margin="normal" sx={{ width: '95%', fontFamily: 'Readex Pro, sans-serif', mt: 2 }} type='date' required id="date" name="date" value={fields.date} onChange={handleChange} />
                         </Grid>
-                        <Grid item md={2} style={{ marginTop: '1.2%' }}>
+                        <Grid item md={2} style={{ marginTop: '1.2%' }} sm={12} xs={12}>
                             <Box sx={{ minWidth: '95%', fontFamily: 'Readex Pro, sans-serif', marginTop: '0%' }}>
                                 <FormControl fullWidth>
                                     <InputLabel id="demo-simple-select-label">Price</InputLabel>
@@ -94,7 +94,7 @@ function Cowin() {
                                 </FormControl>
                             </Box>
                         </Grid>
-                        <Grid item md={1} style={{ marginTop: '1.2%', marginLeft: '1%' }}>
+                        <Grid item md={1} style={{ marginTop: '1.2%', marginLeft: '1%' }} sm={12} xs={12}>
                             <Box sx={{ minWidth: '95%', fontFamily: 'Readex Pro, sans-serif', marginTop: '0%' }}>
                                 <FormControl fullWidth>
                                     <InputLabel id="demo-simple-select-label">Age</InputLabel>
@@ -109,7 +109,7 @@ function Cowin() {
                                 </FormControl>
                             </Box>
                         </Grid>
-                        <Grid item md={1} style={{ marginTop: '1.2%', marginLeft: '1%' }}>
+                        <Grid item md={1} style={{ marginTop: '1.2%', marginLeft: '1%' }} sm={12} xs={12}>
                             <Box sx={{ minWidth: '95%', fontFamily: 'Readex Pro, sans-serif', marginTop: '0%' }}>
                                 <FormControl fullWidth>
                                     <InputLabel id="demo-simple-select-label">Vaccine</InputLabel>
@@ -124,7 +124,7 @@ function Cowin() {
                                 </FormControl>
                             </Box>
                         </Grid>
-                        <Grid item md={3} sx={{ marginTop: '1.2%', marginLeft: '1%' }}>
+                        <Grid item md={3} sx={{ marginTop: '1.2%', marginLeft: '1%' }} sm={12} xs={12}>
                             <Button onClick={searchCenters} variant="outlined" className='searchBtn' sx={{ width: '100%', height: '90%' }}>Search</Button>
                         </Grid>
                     </Grid>
