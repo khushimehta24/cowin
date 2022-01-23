@@ -40,7 +40,7 @@ function Cowin() {
     }));
     const [fields, setFields] = useState({ pincode: '', date: '', type: 'ALL', age: 'AL', price: 'A' });
     const [centers, setCenters] = useState([]);
-    const [dummyCenters, setDummyCenters] = useState([]);
+    let dummyCenters = [];
 
 
     const handleChange = (e) => {
@@ -57,13 +57,13 @@ function Cowin() {
         console.log(URL);
         axios.get(URL)
             .then(res => {
-                setDummyCenters(res.data.sessions);
+                dummyCenters = res.data.sessions;
+                setCenters([])
+                const filteredData1 = dummyCenters.filter((dummydata) => fields.type === 'ALL' ? (dummydata.vaccine === 'COVAXIN' || dummydata.vaccine === 'COVISHIELD') : dummydata.vaccine === fields.type);
+                const filteredData2 = filteredData1.filter((dummydata) => fields.price === 'A' ? (dummydata.fee_type === 'Free' || dummydata.fee_type === 'Paid') : dummydata.fee_type === fields.price)
+                const filteredData3 = filteredData2.filter((dummydata) => fields.age === 'AL' ? (dummydata.min_age_limit === 18 || dummydata.min_age_limit === 45 || dummydata.min_age_limit <= 18) : dummydata.min_age_limit === fields.age)
+                setCenters(filteredData3)
             })
-        setCenters([])
-        const filteredData1 = dummyCenters.filter((dummydata) => fields.type === 'ALL' ? (dummydata.vaccine === 'COVAXIN' || dummydata.vaccine === 'COVISHIELD') : dummydata.vaccine === fields.type);
-        const filteredData2 = filteredData1.filter((dummydata) => fields.price === 'A' ? (dummydata.fee_type === 'Free' || dummydata.fee_type === 'Paid') : dummydata.fee_type === fields.price)
-        const filteredData3 = filteredData2.filter((dummydata) => fields.age === 'AL' ? (dummydata.min_age_limit === 18 || dummydata.min_age_limit === 45 || dummydata.min_age_limit <= 18) : dummydata.min_age_limit === fields.age)
-        setCenters(filteredData3)
 
     }
 
