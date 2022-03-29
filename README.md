@@ -5,12 +5,8 @@
 A app which shows the statistics of all the Covid 19 cases of all the countries and also allows you to find your nearby vaccination centers
 
 
-#### Deployed on netlify
-
-
-```bash
-  https://frosty-austin-9567e2.netlify.app/
-```
+#### 🔗 Deployed on netlify
+[![link](https://img.shields.io/badge/Click_to_view_Deployed_app-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://frosty-austin-9567e2.netlify.app/)
 
 
 ## Screenshots
